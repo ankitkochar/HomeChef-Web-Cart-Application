@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>Homechef - Kitchen secrets</title>
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+
+        body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .main {
+            background: linear-gradient(rgba(255, 193, 0, 0.3), rgba(255, 193, 0, 0.3)), url('https://images.unsplash.com/photo-1516824467205-afa656d31a79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1700&q=80&h=805') no-repeat center center;
+            background-size: cover;
+            border-radius: 30px;
+            width: 98vw;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .navbar-brand {
+            color: black;
+        }
+
+        .nav_a {
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 2px;
+        }
+
+        .nav_a:hover {
+            color: black;
+            font-weight: 600;
+        }
+
+        .nav-item.active {
+            font-weight: 700;
+        }
+
+        .sl.active {
+            font-weight: 700;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+        }
+
+        .main_line>h1 {
+            font-size: 75px;
+        }
+
+        .mid_text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .navbar-toggler {
+            border: 2px solid black;
+        }
+
+        .fa-play {
+            font-size: 20px;
+            color: white;
+            background-color: rgb(255, 100, 99);
+            padding: 27px 27px;
+            border-radius: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .tab>a {
+            color: black;
+        }
+
+        .tab {
+            border: 1px solid #aaa;
+            border-radius: 25px;
+        }
+
+        .icon-food {
+            border-radius: 15px;
+        }
+
+        .tab.active {
+            background-color: rgb(255, 206, 61);
+        }
+
+        .search-box {
+            border: 1px solid #aaa;
+            width: 44vw;
+            height: 40px;
+            border-radius: 25px;
+        }
+
+        .search-box::placeholder {
+            padding: 10px;
+        }
+
+        .btn-1 {
+            border: none;
+            font-weight: 700;
+        }
+
+        .drop-1 {
+            height: 40px;
+            border-radius: 17px;
+            width: max-content;
+        }
+
+        .best-seller {
+            color: rgb(255, 206, 61);
+        }
+
+        .image-1 {
+            height: 15vh;
+            width: 8vw;
+        }
+
+        .cart-add-btn {
+            width: 8vw;
+            font-weight: 600;
+            border-radius: 2px !important;
+        }
+        .add-1, .sub-1 {
+            cursor: pointer;
+        }
+        .sub-total{
+            width: 9vw;
+        }
+        .total-style{
+            width: 100%;
+        }
+        .empty-cart-image{
+            width: 80%;
+        }
+        .item-1{
+            padding-bottom: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Home  -->
+    <div class="bg-light mx-auto pb-5" style="border-radius: 30px;">
+
+        <div class="main mt-1 mx-auto pb-5">
+
+            <!-- Navbar  -->
+
+            <nav class="navbar navbar-expand-lg py-3 mx-4" style="background-color: rgba(0, 0, 0, 0)">
+                <a class="navbar-brand font-weight-bold" href="#">Homechef</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="far fa-caret-square-down"></i>
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                </button>
+
+                <div class="collapse navbar-collapse ml-lg-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item mx-lg-3">
+                            <a class="nav-link nav_a" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item mx-lg-3">
+                            <a class="nav-link nav_a" href="#">Features</a>
+                        </li>
+                        <li class="nav-item mx-lg-3 active">
+                            <a class="nav-link nav_a" href="#">Recipes</a>
+                        </li>
+                        <li class="nav-item mx-lg-3">
+                            <a class="nav-link nav_a" href="#">Hotline</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0">
+                        <a class="nav_a mr-3 sl" onclick=" z=0;activating1();">Login</a>
+                        <a class="nav_a ml-3 sl active" onclick=" z=1;activating1();">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-0 px-sm-3">
+                <div class="row main_line mx-auto mt-5 pt-sm-3">
+                    <h1 class="col-md-4 ml-md-3  px-0">Chefs <span class="pl-md-5 ml-md-5">Academy</span> Secrets</h1>
+                    <p class="col-md-3 mid_text"><i class="fas fa-heart text-white pr-2"
+                            style="transform: rotate(330deg);"></i>New strawberry season has started, let's cook!</p>
+                </div>
+            </div>
+
+            <!-- video  -->
+
+            <div class="container-fluid row justify-content-end mt-4">
+                <a href="#"><i class="fas fa-play"></i></a>
+            </div>
+        </div>
+
+        <div class="row mx-md-5 mt-5">
+            <div class="col-lg-2">
+                <h1 class="ml-md-2">Dishes</h1>
+                <div class="mt-5">
+                    <ul class="p-0 small">
+                        <li class="tab w-75 mb-3"><a class="" href="#"><i
+                                    class="icon-food fas m-2 mr-3 bg-white p-2 mr-2 fa-pizza-slice"></i>Pizza</a></li>
+                        <li class="tab active w-75 mb-3"><a class="" href="#"><i
+                                    class="icon-food fas m-2 mr-3 bg-white p-2 mr-2 fa-cheese"></i>Dessert</a></li>
+                        <li class="tab w-75 mb-3"><a class="" href="#"><i
+                                    class="icon-food fas m-2 mr-3 bg-white p-2 mr-2 fa-hamburger"></i>Noodle</a></li>
+                        <li class="tab w-75 mb-3"><a class="" href="#"><i
+                                    class="icon-food fas m-2 mr-3 bg-white p-2 mr-2 fa-glass-martini-alt"></i>Cocktails</a>
+                        </li>
+                        <li class="tab w-75 mb-3"><a class="" href="#"><i
+                                    class="icon-food fas m-2 mr-3 bg-white p-2 mr-2 fa-seedling"></i>Salad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <input class="search-box bg-light" type="text" placeholder="Search recipes and more...">
+                <div class="main-list mt-5">
+                    <div class="card item-1">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="col-7">
+                                    <div class="d-flex small">
+                                        <i class="far fa-stop-circle text-success pt-1"></i>
+                                        <p class="best-seller"><i class="fas fa-star small px-1"></i>Bestseller</p>
+                                    </div>
+                                    <h6 class="card-title">Chhole Bhatoore</h6>
+                                    <p class="price-item">&#8377; 130</p>
+                                </div>
+                                <div class="col-4 px-0 offset-lg-1">
+                                    <img class="image-1"
+                                        src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                        alt="">
+                                    <button class="btn btn-outline-warning cart-add-btn"><span class="px-2 sub-1"></span><span
+                                            class="value-change">Add</span><span class="px-2 add-1"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item-2">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="col-7">
+                                    <div class="d-flex small">
+                                        <i class="far fa-stop-circle text-success pt-1"></i>
+                                        <p class="best-seller"><i class="fas fa-star small px-1"></i>Bestseller</p>
+                                    </div>
+                                    <h6 class="card-title">French Fries</h6>
+                                    <p class="price-item">&#8377; 100</p>
+                                </div>
+                                <div class="col-4 px-0 offset-lg-1">
+                                    <img class="image-1"
+                                        src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=80"
+                                        alt="">
+                                    <button class="btn btn-outline-warning cart-add-btn"><span class="px-2 sub-1"></span><span
+                                            class="value-change">Add</span><span class="px-2 add-1"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item-3">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="col-7">
+                                    <div class="d-flex small">
+                                        <i class="far fa-stop-circle text-success pt-1"></i>
+                                        <p class="best-seller"><i class="fas fa-star small px-1"></i>Bestseller</p>
+                                    </div>
+                                    <h6 class="card-title">Veg Fried Rice</h6>
+                                    <p class="price-item">&#8377; 150</p>
+                                </div>
+                                <div class="col-4 px-0 offset-lg-1">
+                                    <img class="image-1"
+                                        src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                                        alt="">
+                                    <button class="btn btn-outline-warning cart-add-btn"><span class="px-2 sub-1"></span><span
+                                            class="value-change">Add</span><span class="px-2 add-1"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item-4">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="col-7">
+                                    <div class="d-flex small">
+                                        <i class="far fa-stop-circle text-success pt-1"></i>
+                                        <p class="best-seller"><i class="fas fa-star small px-1"></i>Bestseller</p>
+                                    </div>
+                                    <h6 class="card-title">Curry Rice</h6>
+                                    <p class="price-item">&#8377; 50</p>
+                                </div>
+                                <div class="col-4 px-0 offset-lg-1">
+                                    <img class="image-1"
+                                        src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=80"
+                                        alt="">
+                                    <button class="btn btn-outline-warning cart-add-btn"><span class="px-2 sub-1"></span><span
+                                            class="value-change">Add</span><span class="px-2 add-1"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-2 empty-cart text-muted">
+                <div>
+                    <h3 class="">Cart Empty</h3>
+                    <img class="empty-cart-image pt-5" src="Pictures/cart_empty.png" alt="">
+                    <p class="w-75 pt-4">Good food is always cooking! Go ahead, order some yummy items from the menu.</p>
+                </div>
+            </div>
+                <div class="col-lg-4 mt-2 main-cart ">
+                    <div>
+                        <h3 class="">Cart</h3>
+                        <p class="text-muted "><span class="total-quantity">0</span> ITEM</p>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="t-body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="d-flex total-style justify-content-between">
+                            <h5 class=" pt-2">Subtotal</h5>
+                            <h5 class="sub-total pt-2"></h5>
+                            <a class="btn bg-dark text-white">Check Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+<script src="main.js"></script>
+
+</html>
